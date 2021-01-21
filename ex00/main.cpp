@@ -3,6 +3,6 @@
 int main()
 {
 	FragTrap	ft1("Lelik");
-	
+
 
 }
