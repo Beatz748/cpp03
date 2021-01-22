@@ -4,10 +4,12 @@
 # include <string>
 # include <iostream>
 
+# define SUCCESS	0
+
 class	FragTrap
 {
 	private:
-		unsigned int	_hit_point;
+		unsigned int	_hit_points;
 		unsigned int	_max_hit_points;
 		unsigned int	_energy_points;
 		unsigned int	_max_energy_points;
@@ -23,7 +25,7 @@ class	FragTrap
 		void	rangedAttack(std::string const & target);
 		void	meleeAttack(std::string const & target);
 		void	takeDamage(unsigned int amount);
-		void	beRepaierd(unsigned int amount);
+		void	beRepaired(unsigned int amount);
 		void	vaulthunter_dot_exe(std::string const & target);
 		FragTrap& operator=(FragTrap const& right);
 };
