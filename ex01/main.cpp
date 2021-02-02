@@ -9,7 +9,7 @@ int main(void)
 	FragTrap frag1("Evgeniy");
 	FragTrap frag2(frag1);
 	FragTrap frag3 = frag1;
-	FragTrap frag4("Dasha");
+	FragTrap frag4("Karisha <3");
 	FragTrap frag5("Katya");
 	std::cout << "TESTING MELEEATTACK" << std::endl;
 	frag1.meleeAttack("lol");
@@ -55,7 +55,7 @@ int main(void)
 	frag3.beRepaired(0);
 	frag4.beRepaired(321321);
 	frag1.beRepaired(32);
-	std::cout << "TEddSTING VAULTHUNTERDOT_EXE" << std::endl;
+	std::cout << "TESTING VAULTHUNTERDOT_EXE" << std::endl;
 	frag1.vaulthunter_dot_exe("lol");
 	frag2.vaulthunter_dot_exe("kek");
 	frag3.vaulthunter_dot_exe("test");

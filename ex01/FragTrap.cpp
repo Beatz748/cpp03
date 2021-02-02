@@ -51,9 +51,6 @@ FragTrap& FragTrap::operator=(FragTrap const& right)
 	return (*this);
 }
 
-m
-a
-
 void	FragTrap::meleeAttack(std::string const & target)
 {
 	std::cout << "FR4G-TP " << this->_name

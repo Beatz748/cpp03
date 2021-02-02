@@ -1,5 +1,8 @@
 #pragma SCAVTRAP_HPP
 
+# include <iostream>
+# include <string>
+
 class	ScavTrap
 {
 	private:
@@ -11,8 +14,16 @@ class	ScavTrap
 		std::string		_name;
 		unsigned int	_melee_attack_damage;
 		unsigned int	_ranged_attack_damage;
-	public
-	void		challengeNewcomer();
+		unsigned int	_armor_damage_reduction;
+	public:
+		void			challengeNewcomer();
 	ScavTrap();
-	~ScavTrap()
-}
+	~ScavTrap();
+	ScavTrap(ScavTrap & right);
+	ScavTrap(std::string const name);
+	void	rangedAttack(std::string const & target);
+	void	meleeAttack(std::string const & target);
+	void	takeDamage(unsigned int amount);
+	void	beRepaired(unsigned int amount);
+	void	vaulthunter_dot_exe(std::string const & target);
+};
