@@ -20,6 +20,7 @@ class	ClapTrap
 		unsigned int	_armor_damage_reduction;
 	public:
 		~ClapTrap();
+		ClapTrap();
 		ClapTrap(std::string const name);
 		ClapTrap(ClapTrap const& right);
 		void	rangedAttack(std::string const & target);

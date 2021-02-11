@@ -1,6 +1,6 @@
 #include "FragTrap.hpp"
 
-FragTrap::FragTrap(void)
+FragTrap::FragTrap(void): ClapTrap()
 {
 	_hit_points = 100;
 	_max_hit_points = 100;
@@ -74,45 +74,6 @@ void	FragTrap::meleeAttack(std::string const & target)
 				<< _ranged_attack_damage
 				<< " points of damage!"
 				<< std::endl;
-}
-
-{
-	unsigned int	save;
-
-	save = amount;
-	if (_hit_points == 0)
-	{
-		std::cout << "FR4G-TP "
-					<< "sorry but "
-					<< _name << " is dead" << std::endl;
-		return ;
-	}
-	if (_armor_damage_reduction > amount)
-		amount = 0;
-	else
-		amount -= _armor_damage_reduction;
-	if (_hit_points < amount)
-		amount = _hit_points;
-	_hit_points -= amount;
-	std::cout << "FR4G-TP "
-				<< _name
-				<< " takes " << save
-				<< " points of damage" 
-				<< " now HEALTH = "
-				<< _hit_points
-				<< std::endl;
-}
-void	FragTrap::beRepaired(unsigned int amount)
-{
-	if (amount + _hit_points > _max_hit_points)
-		_hit_points = _max_hit_points;
-	else
-		_hit_points += amount;
-	std::cout << "FR4G-TP "
-				<< _name
-				<< " repaired "
-				<< amount << " health and now have "
-				<< _hit_points << " points " << std::endl;
 }
 void		FragTrap::vaulthunter_dot_exe(std::string const & target)
 {

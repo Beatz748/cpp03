@@ -1,5 +1,19 @@
 #include "ClapTrap.hpp"
 
+ClapTrap::ClapTrap()
+{
+	_hit_points = 100;
+	_max_hit_points = 100;
+	_energy_points = 100;
+	_max_energy_points = 100;
+	_level = 1;
+	_name = "CLAPTRAP";
+	_melee_attack_damage = 30;
+	_ranged_attack_damage = 20;
+	_armor_damage_reduction = 5;
+	std::cout << "CL4P-TP " << _name << " created" << std::endl;
+}
+
 ClapTrap::ClapTrap(std::string const name)
 {
 	_hit_points = 100;
