@@ -13,4 +13,8 @@ class	NinjaTrap : public ClapTrap
 	NinjaTrap(NinjaTrap const& right);
 	NinjaTrap(std::string const name);
 	NinjaTrap& operator=(NinjaTrap const& right);
+	void	ninjaShoebox(FragTrap const & right);
+	void	ninjaShoebox(ScavTrap const & right);
+	void	ninjaShoebox(ClapTrap const & right);
+	void	ninjaShoebox(NinjaTrap const & right);
 };

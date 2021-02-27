@@ -53,3 +53,12 @@ NinjaTrap& NinjaTrap::operator=(NinjaTrap const& right)
 	this->_armor_damage_reduction = right._armor_damage_reduction;
 	return (*this);
 }
+void	ninjaShoebox(FragTrap const & right);
+{
+	std::cout << "heh, u r FragTrap " << right.get
+}
+void	ninjaShoebox(ScavTrap const & right);
+
+void	ninjaShoebox(ClapTrap const & right);
+
+void	ninjaShoebox(NinjaTrap const & right);
