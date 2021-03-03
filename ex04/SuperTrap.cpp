@@ -1,20 +1,20 @@
-#include "NinjaTrap.hpp"
+#include "SuperTrap.hpp"
 
-NinjaTrap::NinjaTrap(void)
+SuperTrap::SuperTrap(void)
 {
 	_hit_points = 60;
 	_max_hit_points = 60;
 	_energy_points = 120;
 	_max_energy_points = 120;
 	_level = 1;
-	_name = "NinjaTRAP";
+	_name = "SuperTRAP";
 	_melee_attack_damage = 60;
 	_ranged_attack_damage = 5;
 	_armor_damage_reduction = 0;
 	std::cout << "SC4V-TP " << _name << " created" << std::endl;
 }
 
-NinjaTrap::NinjaTrap(std::string const name)
+SuperTrap::SuperTrap(std::string const name)
 {
 	_hit_points = 100;
 	_max_hit_points = 100;
@@ -28,19 +28,19 @@ NinjaTrap::NinjaTrap(std::string const name)
 	std::cout << "SC4V-TP " << _name << " created" << std::endl;
 }
 
-NinjaTrap::~NinjaTrap()
+SuperTrap::~SuperTrap()
 {
 	std::cout << _name
 				<< " deleted"
 				<< std::endl;
 }
 
-NinjaTrap::NinjaTrap(NinjaTrap const& right)
+SuperTrap::SuperTrap(SuperTrap const& right)
 {
 	*this = right;
 }
 
-NinjaTrap& NinjaTrap::operator=(NinjaTrap const& right)
+SuperTrap& SuperTrap::operator=(SuperTrap const& right)
 {
 	this->_hit_points = right._hit_points;
 	this->_max_hit_points = right._max_hit_points;
@@ -53,24 +53,13 @@ NinjaTrap& NinjaTrap::operator=(NinjaTrap const& right)
 	this->_armor_damage_reduction = right._armor_damage_reduction;
 	return (*this);
 }
-void	NinjaTrap::ninjaShoebox(FragTrap const & right) const
+
+void	SuperTrap::meleeAttack(std::string const & right)
 {
-	std::cout << "heh, u r FragTrap " << right.getname()
-		<< std::endl;
-}
-void	NinjaTrap::ninjaShoebox(ScavTrap const & right) const
-{
-	std::cout << "heh, u r scavTrap " << right.getname()
-		<< std::endl;
+	NinjaTrap::meleeAttack(right);	
 }
 
-void	NinjaTrap::ninjaShoebox(ClapTrap const & right) const
+void	SuperTrap::rangedAttack(std::string const & right)
 {
-	std::cout << "heh, u r clapTrap " << right.getname()
-		<< std::endl;
-}
-void	NinjaTrap::ninjaShoebox(NinjaTrap const & right) const
-{
-	std::cout << "heh, u r ninjaTrap " << right.getname()
-		<< std::endl;
+	FragTrap::rangedAttack(right);	
 }

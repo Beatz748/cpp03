@@ -53,11 +53,13 @@ NinjaTrap& NinjaTrap::operator=(NinjaTrap const& right)
 	this->_armor_damage_reduction = right._armor_damage_reduction;
 	return (*this);
 }
+
 void	NinjaTrap::ninjaShoebox(FragTrap const & right) const
 {
 	std::cout << "heh, u r FragTrap " << right.getname()
 		<< std::endl;
 }
+
 void	NinjaTrap::ninjaShoebox(ScavTrap const & right) const
 {
 	std::cout << "heh, u r scavTrap " << right.getname()
@@ -69,8 +71,20 @@ void	NinjaTrap::ninjaShoebox(ClapTrap const & right) const
 	std::cout << "heh, u r clapTrap " << right.getname()
 		<< std::endl;
 }
+
 void	NinjaTrap::ninjaShoebox(NinjaTrap const & right) const
 {
 	std::cout << "heh, u r ninjaTrap " << right.getname()
 		<< std::endl;
+}
+
+void	NinjaTrap::meleeAttack(std::string const & target)
+{
+	std::cout << "FR4G-TP " << this->_name
+				<< " attacks "
+				<< target
+				<< " in melee, causing "
+				<< _ranged_attack_damage
+				<< " points of damage!"
+				<< std::endl;
 }
